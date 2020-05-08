@@ -1,0 +1,60 @@
+body, p, h1, h2, h3 {
+  margin: 0;
+}
+
+:root {
+  --name-color: red;
+  --date-color: black;
+  --about-color: orange;
+}
+
+.main {
+  background-image: url(../img/background.jpg);
+  width: 100%;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.5;
+}
+
+.about-me {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  height: 275px;
+  background-color: var(--name-color);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+}
+
+.info {
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  transition: 5s;
+}
+
+.card:hover .info{
+  transform: matrix(4, 0, 0, 4, 0, 100);
+  transition: 5s;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.card:hover .avatar img {
+  animation:spin 4s linear infinite;
+  transition: 2s;
+}
+
+
+@keyframes spin { 
+  0% { transform:rotate(0) } 
+  100% { transform:rotate(360deg) } 
+}
